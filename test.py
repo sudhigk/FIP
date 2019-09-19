@@ -1,8 +1,6 @@
 import cv2
 print(cv2.__version__)
-#image1 = cv2.imread('images/yodha.jpg',cv2.IMREAD_GRAYSCALE)
-#image2 = cv2.imread('images/jagathy.png',cv2.IMREAD_GRAYSCALE)
-#image1 = cv2.imread('images/dots.png',cv2.IMREAD_GRAYSCALE)
+
 image1 = cv2.imread('images/test.png',cv2.IMREAD_GRAYSCALE)
 
 #image0 = cv2.imread('images/dots.png')
