@@ -48,4 +48,4 @@ cv2.imshow(firstwindow,image1)
 cv2.imshow(secondwindow,image0)
 
 cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv2.destroyAllWindows(
