@@ -1,3 +1,4 @@
+# segmentation based on intensity
 import cv2
 import numpy as np
 image = cv2.imread('images/test.jpg', cv2.IMREAD_GRAYSCALE)
