@@ -1,3 +1,4 @@
+# scaling an image
 import cv2
 import numpy as np
 img0 = cv2.imread('images/test.jpg',cv2.IMREAD_GRAYSCALE)
