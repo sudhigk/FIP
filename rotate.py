@@ -1,3 +1,4 @@
+# image rotation
 import cv2
 import math
 img0 = cv2.imread('images/test.jpg',cv2.IMREAD_GRAYSCALE)
