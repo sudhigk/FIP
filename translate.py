@@ -1,3 +1,4 @@
+# image translation
 import cv2
 img0 = cv2.imread('images/test.jpg',cv2.IMREAD_GRAYSCALE)
 img1 = cv2.imread('images/test.jpg',cv2.IMREAD_GRAYSCALE)
