@@ -30,13 +30,13 @@ sy = int(input('enter scaling factor for y :'))
 #         img1[i,j] = 0
 
 for i in range (0, d1):
-    ssx = ((i-px)*sx)+px
+    ssy = ((i-py)*sy)+py
     # print(i,ssx)
     for j in range (0, d2):
-        ssy = ((j-py)*sy)+py
-        if (ssx<d1 and ssy<d2):
+        ssx = ((j-px)*sx)+px
+        if (ssx<d2 and ssy<d1):
             if(ssx>=0 and ssy>=0):
-                img1[ssx, ssy] = img0[i, j]
+                img1[d1-ssy-1, ssx] = img0[d1-i-1, j]
 print(type(i))
 cv2.imshow(w1,img0)
 cv2.imshow(w2,img1)
