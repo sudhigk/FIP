@@ -4,25 +4,27 @@ import numpy as np
 # (d1,d2) = img1.shape
 # print(d1,d2)
 
-img1 = np.zeros((2,3,3), np.uint8)
-d1 = 2
+img1 = np.zeros((3,3,3), np.uint8)
+d1 = 3
 d2 = 3
-nm = 4
-for i in range(0,2):
+nm = 1
+for i in range(0,3):
     for j in range(0,3):
         img1[i,j,0] = nm
         img1[i, j, 1] = nm
         img1[i, j, 2] = nm
         nm = nm +1
 
+md1 = 3
+md2 = 2
 
-mask = np.zeros((3,1,3), np.uint8)
-for i in range(0,3):
-    for j in range(0,1):
+mask = np.zeros((md1,md2,3), np.uint8)
+for i in range(0,md1):
+    for j in range(0,md2):
         mask[i,j] = 1
 
 nd1 = d1+3-1
-nd2 = d2+1-1
+nd2 = d2+2-1
 
 otpt = np.zeros((nd1,nd2,3), np.uint8)
 
@@ -42,9 +44,9 @@ cv2.moveWindow(w2,0,400)
 for i in range(0,nd1):
     for j in range(0,nd2):
         s = 0
-        for m in range(0,3):
+        for m in range(0,md1):
             if((i-m)>=0 and (i-m)<d1):
-                for n in range(0,1):
+                for n in range(0,md2):
                     if((j-n)>=0 and (j-n)<d2):
                         # print(m, n)
                         s = s + mask[m, n] * img1[i-m, j-n]
