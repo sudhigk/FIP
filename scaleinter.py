@@ -39,13 +39,13 @@ sy = int(input('enter scaling factor for y :'))
 #         img1[i,j] = 0
 
 for i in range (0, d1):
-    ssx = ((i-px)*sx)+px
+    ssy = ((i-py)*sy)+py
     # print(i,ssx)
     for j in range (0, d2):
-        ssy = ((j-py)*sy)+py
-        if (ssx<d1 and ssy<d2):
-            if(ssx>=0 and ssy>=0):
-                img1[ssx, ssy] = img0[i, j]
+        ssx = ((j-px)*sx)+px
+        if (ssy<d1 and ssx<d2):
+            if(ssy>=0 and ssx>=0):
+                img1[d1-1-ssy, ssx] = img0[d1-1-i, j]
 
 for i in range (0 ,d1):
     for j in range (0, d2):
