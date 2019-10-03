@@ -1,3 +1,4 @@
+# convolution using mask
 import cv2
 import numpy as np
 img1 = cv2.imread('images/test.jpg',cv2.IMREAD_GRAYSCALE)
