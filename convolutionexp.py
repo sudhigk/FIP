@@ -18,11 +18,11 @@ for i in range(0,3):
 
 md1 = 3
 md2 = 2
-
-mask = np.zeros((md1,md2,3), np.uint8)
+mask =np.array([[0.0,0.0],[0.0,0.0],[0.0,0.0]])
+# mask = np.zeros((md1,md2,3), np.uint8)
 for i in range(0,md1):
     for j in range(0,md2):
-        mask[i,j] = 1
+        mask[i,j] = 1/9
 
 nd1 = d1+3-1
 nd2 = d2+2-1
