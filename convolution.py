@@ -25,8 +25,8 @@ for i in range(0,md1):
     for j in range(0,md2):
         mask[i,j] = 1/9
 
-nd1 = d1+3-1
-nd2 = d2+1-1
+nd1 = d1+md2-1
+nd2 = d2+md2-1
 
 otpt = np.zeros((nd1,nd2,3), np.uint8)
 
