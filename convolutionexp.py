@@ -61,6 +61,7 @@ for i in range(0,nd1):
         # print(type(s))
         otpt[i,j] = s
         print(s[0])
+    print('\n')
 
 for i in range(0,nd1):
     print("\n")
