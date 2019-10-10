@@ -17,13 +17,13 @@ for i in range(0,d1):
         nm = nm +1
 
 md1 = 3
-md2 = 2
+md2 = 3
 # mask = np.zeros((md1,md2,3), np.uint8)
-mask =np.array([[0.0,0.0],[0.0,0.0],[0.0,0.0]])
-# mask =np.array([[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0]])
+# mask =np.array([[0.0,0.0],[0.0,0.0],[0.0,0.0]])
+mask =np.array([[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0]])
 for i in range(0,md1):
     for j in range(0,md2):
-        mask[i,j] = 1
+        mask[i,j] = 1/9
 
 nd1 = d1+md1-1
 nd2 = d2+md2-1
@@ -43,16 +43,24 @@ cv2.namedWindow(w2,cv2.WINDOW_FREERATIO)
 cv2.resizeWindow(w2,400,400)
 cv2.moveWindow(w2,0,400)
 
+for i in range(0,md1):
+    for j in range(0,md2):
+        print(mask[i,j])
+
 for i in range(0,nd1):
     for j in range(0,nd2):
         s = 0
+        # print(type(s))
         for m in range(0,md1):
             if((i-m)>=0 and (i-m)<d1):
                 for n in range(0,md2):
                     if((j-n)>=0 and (j-n)<d2):
                         # print(m, n)
+                        # s = float(s) + float(mask[m, n]) * float(img1[i - m, j - n])
                         s = s + mask[m, n] * img1[i-m, j-n]
+        # print(type(s))
         otpt[i,j] = s
+        print(s[0])
 
 for i in range(0,nd1):
     print("\n")
