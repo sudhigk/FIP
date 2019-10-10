@@ -9,23 +9,24 @@ img1 = np.zeros((3,3,3), np.uint8)
 d1 = 3
 d2 = 3
 nm = 1
-for i in range(0,3):
-    for j in range(0,3):
+for i in range(0,d1):
+    for j in range(0,d2):
         img1[i,j,0] = nm
         img1[i, j, 1] = nm
         img1[i, j, 2] = nm
         nm = nm +1
 
 md1 = 3
-md2 = 3
+md2 = 2
 # mask = np.zeros((md1,md2,3), np.uint8)
-mask =np.array([[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0]])
+mask =np.array([[0.0,0.0],[0.0,0.0],[0.0,0.0]])
+# mask =np.array([[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0]])
 for i in range(0,md1):
     for j in range(0,md2):
-        mask[i,j] = 1/9
+        mask[i,j] = 1
 
-nd1 = d1+3-1
-nd2 = d2+3-1
+nd1 = d1+md1-1
+nd2 = d2+md2-1
 
 otpt = np.zeros((nd1,nd2,3), np.uint8)
 
