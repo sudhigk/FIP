@@ -1,4 +1,4 @@
-# scale image with interpolation
+# histogram equalization
 import cv2
 import numpy as np
 # img0 = cv2.imread('images/histo.png',cv2.IMREAD_GRAYSCALE)
