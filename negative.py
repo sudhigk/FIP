@@ -1,5 +1,5 @@
+# negative of an image
 import cv2
-import math
 import numpy as np
 
 img = cv2.imread("images/test.jpg",cv2.IMREAD_GRAYSCALE)
