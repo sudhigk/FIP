@@ -45,12 +45,13 @@ cv2.moveWindow(w2,0,400)
 
 for i in range(0,md1):
     for j in range(0,md2):
-        print(mask[i,j])
+        print("hi ",mask[i,j])
+print("\nresult without rounding\n")
 
 for i in range(0,nd1):
     for j in range(0,nd2):
         s = 0
-        # print(type(s))
+        print("value of y(",i,",",j,")= ",end='')
         for m in range(0,md1):
             if((i-m)>=0 and (i-m)<d1):
                 for n in range(0,md2):
@@ -58,11 +59,12 @@ for i in range(0,nd1):
                         # print(m, n)
                         # s = float(s) + float(mask[m, n]) * float(img1[i - m, j - n])
                         s = s + mask[m, n] * img1[i-m, j-n]
+                        print(" + (","%.2f"%mask[m,n],"*","%.2f"%img1[i-m, j-n,0],end=' )')
         # print(type(s))
         otpt[i,j] = s
-        print(s[0])
+        print(" = %.2f"%s[0])
     print('\n')
-
+print("\nrounder result\n")
 for i in range(0,nd1):
     print("\n")
     for j in range(0,nd2):
