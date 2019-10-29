@@ -2,11 +2,20 @@
 import numpy as np
 import cv2
 # Read the image in greyscale
-img = cv2.imread('images/test.jpg',0)
+img1 = cv2.imread('images/test.jpg',0)
 
-#Iterate over each pixel and change pixel value to binary using np.binary_repr() and store it in a list.
-lst = []
-for i in range(img.shape[0]):
-    for j in range(img.shape[1]):
-         lst.append(np.binary_repr(img[i][j] ,width=8)) # width = no. of bits
-print(type(lst[0]))
+s = [0] * 9
+
+s = [int(0)] * 9
+for m in range(0,3):
+    for n in range(0,3):
+        s[( m * 3) + n] =(img1[1000-3-1+m, 100-3-1+n])
+        print((img1[1000-3-1+m, 100-3-1+n]))
+print(s)
+s.sort()
+otpt = s[4]
+
+print(s)
+
+
+print(otpt)
