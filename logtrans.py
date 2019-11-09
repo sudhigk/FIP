@@ -28,4 +28,4 @@ for i in range (0,d1):
 cv2.imshow(w1,img)
 cv2.imshow(w2,otpt)
 cv2.waitKey(0)
-cv2.destroyWindow()
+cv2.destroyAllWindows()
