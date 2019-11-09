@@ -40,5 +40,5 @@ for i in range (0, d1):
 print(type(i))
 cv2.imshow(w1,img0)
 cv2.imshow(w2,img1)
-cv2.waitKey(5000)
+cv2.waitKey(0)
 cv2.destroyAllWindows()
