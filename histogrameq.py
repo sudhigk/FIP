@@ -48,8 +48,8 @@ for i in range (0, d1):
         temp = img0[i,j]
         otpt[i,j] = s[temp]
 
-for i in range(0, 256):
-    print(i,"| r=",r[i]," p=",p[i]," s[",i,"]=",s[i])
+# for i in range(0, 256):
+#     print(i,"| r=",r[i]," p=",p[i]," s[",i,"]=",s[i])
 
 # sum = 0
 # for i in range (0,256):
