@@ -7,9 +7,9 @@ img0 = cv2.imread('images/test.jpg',cv2.IMREAD_GRAYSCALE)
 
 (d1, d2) = img0.shape
 print(d1,d2)
-img1 = np.zeros((d1,d2,3), np.uint8)
-otpt = np.zeros((d1,d2,3), np.uint8)
-img2 = np.zeros((d1,d2,3), np.uint8)
+img1 = np.zeros((d1,d2,1), np.uint8)
+otpt = np.zeros((d1,d2,1), np.uint8)
+img2 = np.zeros((d1,d2,1), np.uint8)
 w1 = 'input'
 w2 = 'output'
 w3 = 'interpolated output'
@@ -55,11 +55,9 @@ print(otpt[0,0])
 for y in range (d1-2, 1, -1):
     for x in range (d2-2, 1, -1):
         # print('hi')
-        if(img1[y,x,0]== 0 and img1[y,x,1]==0 and img1[y,x,2]==0):
-            f = (int(img1[y+1, x-1, 0])+int(img1[y+1, x+1, 0])+int(img1[y-1, x-1, 0])+int(img1[y-1, x+1, 0]))/4
-            otpt[y, x, 0] = f
-            otpt[y, x, 1] = f
-            otpt[y, x, 2] = f
+        if(img1[y,x]== 0):
+            f = (int(img1[y+1, x-1])+int(img1[y+1, x+1])+int(img1[y-1, x-1])+int(img1[y-1, x+1]))/4
+            otpt[y, x] = f
 
 # doing interpolation second time
 
@@ -71,11 +69,9 @@ print(otpt[0,0])
 for y in range (d1-2, 1, -1):
     for x in range (d2-2, 1, -1):
         # print('hi')
-        if(img2[y,x,0]== 0 and img2[y,x,1]==0 and img2[y,x,2]==0):
-            f = (int(img2[y+1, x-1, 0])+int(img2[y+1, x+1, 0])+int(img2[y-1, x-1, 0])+int(img2[y-1, x+1, 0]))/4
-            otpt[y, x, 0] = f
-            otpt[y, x, 1] = f
-            otpt[y, x, 2] = f
+        if(img2[y,x]== 0):
+            f = (int(img2[y+1, x-1])+int(img2[y+1, x+1])+int(img2[y-1, x-1])+int(img2[y-1, x+1]))/4
+            otpt[y, x] = f
 
 
 
