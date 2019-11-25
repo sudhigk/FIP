@@ -51,11 +51,11 @@ for i in range(0,nd1):
     for j in range(0,nd2):
         s = [int(0)] * 9
         for m in range(0,md1):
-            if((i-md1-1+m)>=0 and (i-md1-1+m)<d1):
+            if((i-m)>=0 and (i-m)<d1):
                 for n in range(0,md2):
-                    if((j-md2-1+n)>=0 and (j-md2-1+n)<d2):
+                    if((j-n)>=0 and (j-n)<d2):
                         # print(m, n)
-                        s[( m * 3) + n] = (mask[m, n]) * (img1[i-md1-1+m, j-md2-1+n])
+                        s[( m * 3) + n] = (mask[m, n]) * (img1[i-m, j-n])
         s.sort()
         otpt[i,j] = s[4]
 
