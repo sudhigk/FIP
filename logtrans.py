@@ -23,7 +23,8 @@ cv2.moveWindow(w2,0,400)
 
 for i in range (0,d1):
     for j in range(0,d2):
-        otpt[i,j]= 100 * math.log(img[i,j],10)
+        if(img[i,j]>0):
+            otpt[i,j]= 100 * math.log(img[i,j],10)
 
 cv2.imshow(w1,img)
 cv2.imshow(w2,otpt)
