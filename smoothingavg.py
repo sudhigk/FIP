@@ -49,11 +49,11 @@ for i in range(0,nd1):
     for j in range(0,nd2):
         s = 0.0
         for m in range(0,md1):
-            if((i-md1-1+m)>=0 and (i-md1-1+m)<d1):
+            if((i-m)>=0 and (i-m)<d1):
                 for n in range(0,md2):
-                    if((j-md2-1+n)>=0 and (j-md2-1+n)<d2):
+                    if((j-n)>=0 and (j-n)<d2):
                         # print(m, n)
-                        s =float(s) + float(mask[m, n]) * float(img1[i-md1-1+m, j-md2-1+n])
+                        s =float(s) + float(mask[m, n]) * float(img1[i-m, j-n])
 
         otpt[i,j] = int((1/16) * s )
 
