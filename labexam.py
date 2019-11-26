@@ -28,4 +28,4 @@ for i in range(0,256):
 if(s!=-1):
     print('second largest intensity :',s,'\tcount:',r[s])
 else:
-    print('image has a single intensity value ',l,'count:',l)
+    print('image has a single intensity value ',l,'count:',r[l])
